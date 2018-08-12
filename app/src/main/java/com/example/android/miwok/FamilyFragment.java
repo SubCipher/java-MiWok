@@ -53,35 +53,38 @@ public class FamilyFragment extends Fragment {
 
     @Override
     public  View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.activity_family, container, false);
+        final View rootView = inflater.inflate(R.layout.word_list, container, false);
 
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word(getString(R.string.family_father), getString(R.string.miwok_family_father),
+        words.add(new Word(R.string.family_father, R.string.miwok_family_father,
                 R.drawable.family_father, R.raw.family_father));
-        words.add(new Word(getString(R.string.family_mother), getString(R.string.miwok_family_mother),
+
+        words.add(new Word(R.string.family_mother,R.string.miwok_family_mother,
                 R.drawable.family_mother, R.raw.family_mother));
-        words.add(new Word(getString(R.string.family_son), getString(R.string.miwok_family_son),
+        words.add(new Word(R.string.family_son, R.string.miwok_family_son,
                 R.drawable.family_son, R.raw.family_son));
-        words.add(new Word(getString(R.string.family_daughter), getString(R.string.miwok_family_daughter),
+        words.add(new Word(R.string.family_daughter, R.string.miwok_family_daughter,
                 R.drawable.family_daughter, R.raw.family_daughter));
-        words.add(new Word(getString(R.string.family_older_brother), getString(R.string.miwok_family_older_brother),
+        words.add(new Word(R.string.family_older_brother,R.string.miwok_family_older_brother,
                 R.drawable.family_older_brother, R.raw.family_older_brother));
-        words.add(new Word( getString(R.string.family_younger_brother), getString(R.string.miwok_family_younger_brother),
+
+        words.add(new Word(R.string.family_younger_brother,R.string.miwok_family_younger_brother,
                 R.drawable.family_younger_brother, R.raw.family_younger_brother));
-        words.add(new Word(getString(R.string.family_older_sister), getString(R.string.miwok_family_older_sister),
+        words.add(new Word(R.string.family_older_sister, R.string.miwok_family_older_sister,
                 R.drawable.family_older_sister, R.raw.family_older_sister));
-        words.add(new Word(getString(R.string.family_younger_sister), getString(R.string.miwok_family_younger_sister),
+
+        words.add(new Word(R.string.family_younger_sister, R.string.miwok_family_younger_sister,
                 R.drawable.family_younger_sister, R.raw.family_younger_sister));
-        words.add(new Word(getString(R.string.family_grandmother),getString(R.string.miwok_family_grandmother),
+        words.add(new Word(R.string.family_grandmother,R.string.miwok_family_grandmother,
                 R.drawable.family_grandmother, R.raw.family_grandmother));
-        words.add(new Word(getString(R.string.family_grandfather), getString(R.string.miwok_family_grandfather),
+        words.add(new Word(R.string.family_grandfather, R.string.miwok_family_grandfather,
                 R.drawable.family_grandfather, R.raw.family_grandfather));
 
         WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_family);
-        ListView familyListView = (ListView) rootView.findViewById(R.id.familyActivityView);
+        ListView familyListView = (ListView) rootView.findViewById(R.id.list);
 
         familyListView.setAdapter(adapter);
         familyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

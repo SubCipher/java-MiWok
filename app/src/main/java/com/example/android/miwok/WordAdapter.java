@@ -46,7 +46,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         translationView.setText(currentWord.getDefaultTranslastion());
 
         ImageView iconImage = (ImageView) listItemView.findViewById(R.id.listImage);
-        iconImage.setImageResource(currentWord.getmImageResourceId());
+
+        if(currentWord.hasImage()){
+            iconImage.setImageResource(currentWord.getmImageResourceId());
+            iconImage.setVisibility(View.VISIBLE);
+        } else {
+            iconImage.setVisibility(View.GONE);
+        }
+
 
         ImageView soundPlayIcon = (ImageView) listItemView.findViewById(R.id.playIcon);
         soundPlayIcon.setImageResource(R.mipmap.baseline_play1_circle_outline_white_18dp);

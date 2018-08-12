@@ -57,21 +57,21 @@ public class NumbersFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-       final View rootView = inflater.inflate(R.layout.activity_numbers,container,false);
+       final View rootView = inflater.inflate(R.layout.word_list,container,false);
 
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one","lutti", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("two","otiiko", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("three","tolookosu", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("four","oyyisa", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("five","massokka", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("six","temmokka", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("seven","kenekaku", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("eight","kawinta", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("nine","wo'e", R.mipmap.ic_launcher,R.raw.kitten6));
-        words.add(new Word("ten","na'aacha", R.mipmap.ic_launcher,R.raw.kitten6));
+        words.add(new Word(R.string.number_one,R.string.miwok_number_one, R.mipmap.ic_launcher,R.raw.number_one));
+        words.add(new Word(R.string.number_two,R.string.miwok_number_two, R.mipmap.ic_launcher,R.raw.number_two));
+        words.add(new Word(R.string.number_three,R.string.miwok_number_three, R.mipmap.ic_launcher,R.raw.number_three));
+        words.add(new Word(R.string.number_four,R.string.miwok_number_four, R.mipmap.ic_launcher,R.raw.number_four));
+        words.add(new Word(R.string.number_five,R.string.miwok_number_five, R.mipmap.ic_launcher,R.raw.number_five));
+        words.add(new Word(R.string.number_six,R.string.miwok_number_six, R.mipmap.ic_launcher,R.raw.number_six));
+        words.add(new Word(R.string.number_seven,R.string.miwok_number_seven, R.mipmap.ic_launcher,R.raw.number_seven));
+        words.add(new Word(R.string.number_eight,R.string.miwok_number_eight, R.mipmap.ic_launcher,R.raw.number_eight));
+        words.add(new Word(R.string.number_nine,R.string.miwok_number_nine, R.mipmap.ic_launcher,R.raw.number_nine));
+        words.add(new Word(R.string.number_ten,R.string.miwok_number_ten, R.mipmap.ic_launcher,R.raw.number_ten));
 
         WordAdapter itemsAdapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
         ListView numberlistView = (ListView) rootView.findViewById(R.id.list);

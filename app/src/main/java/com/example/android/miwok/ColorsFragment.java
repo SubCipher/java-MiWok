@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class ColorsFragment extends Fragment {
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
+
 
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
@@ -57,10 +59,15 @@ public class ColorsFragment extends Fragment {
         //empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+    }
+
 
     @Override
     public View onCreateView (LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_colors,container,false);
+        View rootView = inflater.inflate(R.layout.word_list,container,false);
 
 
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -70,17 +77,17 @@ public class ColorsFragment extends Fragment {
 
         final ArrayList<Word> colors = new ArrayList<>();
 
-        colors.add(new Word("red", "wetetti", R.mipmap.ic_launcher, R.raw.kitten6));
-        colors.add(new Word("green", "chokokki", R.mipmap.ic_launcher, R.raw.clearday));
-        colors.add(new Word("brown", "takaakki", R.mipmap.ic_launcher, R.raw.es1));
-        colors.add(new Word("gray", "topoppi", R.mipmap.ic_launcher, R.raw.kitten6));
-        colors.add(new Word("black", "kululli", R.mipmap.ic_launcher, R.raw.kitten6));
-        colors.add(new Word("white", "kelelli", R.mipmap.ic_launcher, R.raw.kitten6));
+        colors.add(new Word(R.string.color_red, R.string.miwok_color_red, R.mipmap.ic_launcher, R.raw.color_red));
+        colors.add(new Word(R.string.color_green, R.string.miwok_color_green, R.mipmap.ic_launcher, R.raw.color_green));
+        colors.add(new Word(R.string.color_brown, R.string.miwok_color_brown, R.mipmap.ic_launcher, R.raw.color_brown));
+        colors.add(new Word(R.string.color_gray, R.string.miwok_color_gray, R.mipmap.ic_launcher, R.raw.color_gray));
+        colors.add(new Word(R.string.color_black,R.string.miwok_color_black, R.mipmap.ic_launcher, R.raw.color_black));
+        colors.add(new Word(R.string.color_white, R.string.miwok_color_white, R.mipmap.ic_launcher, R.raw.color_white));
 
 
         WordAdapter colorDataSource = new WordAdapter(getActivity(), colors, R.color.category_colors);
 
-        ListView colorListVeiw = (ListView) rootView.findViewById(R.id.colorsActivityView);
+        ListView colorListVeiw = (ListView) rootView.findViewById(R.id.list);
         colorListVeiw.setAdapter(colorDataSource);
 
         colorListVeiw.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -32,6 +32,58 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_category">ActivityCategory</string>
 
+    <!--vocabulary word for numbers -->
+
+    <string name="number_one">one</string>
+    <string name="miwok_number_one">lutti</string>
+
+    <string name="number_two">two</string>
+    <string name="miwok_number_two">otiiko</string>
+
+    <string name="number_three">three</string>
+    <string name="miwok_number_three">tolookosu</string>
+
+    <string name="number_four">four</string>
+    <string name="miwok_number_four">oyyisa</string>
+
+    <string name="number_five">five</string>
+    <string name="miwok_number_five">massokka</string>
+
+    <string name="number_six">six</string>
+    <string name="miwok_number_six">temmokka</string>
+
+    <string name="number_seven">seven</string>
+    <string name="miwok_number_seven">kenekaku</string>
+
+    <string name="number_eight">eight</string>
+    <string name="miwok_number_eight">kawinta</string>
+
+    <string name="number_nine">nine</string>
+    <string name="miwok_number_nine">wo\'e</string>
+
+    <string name="number_ten">ten</string>
+    <string name="miwok_number_ten">na\'aacha</string>
+
+
+    <!-- Vocabulary word for the color red [CHAR LIMIT=20] -->
+    <string name="color_red">red</string>
+    <string name ="miwok_color_red">wetetti</string>
+    <string name="color_green">green</string>
+    <string name="miwok_color_green">chokokki</string>
+
+    <string name="color_brown">brown</string>
+    <string name ="miwok_color_brown">takaakki</string>
+
+    <string name="color_black">black</string>
+    <string name ="miwok_color_black">kululli</string>
+
+    <string name="color_gray">gray</string>
+    <string name ="miwok_color_gray">topoppi</string>
+
+
+    <string name="color_white">white</string>
+    <string name ="miwok_color_white">kelelli</string>
+
     <!--Miwok Family Description -->
     <string name="family_father">father</string>
     <string name="miwok_family_father">epe</string>
@@ -56,6 +108,20 @@
     <string name="family_grandfather">grandfather</string>
     <string name="miwok_family_grandfather">paapa</string>
 
+    <string name="phrase_where_are_you_going">Where are you going?</string>
+    <string name="miwok_phrase_where_are_you_going">miwok phrase where are you going</string>
+    <string name="phrase_what_is_your_name">phrase_what_is_your_name</string>
+    <string name="miwok_phrase_what_is_your_name">miwok_phrase_what_is_your_name</string>
+    <string name="phrase_my_name_is">phrase_my_name_is</string>
+    <string name="miwok_phrase_my_name_is">miwok_phrase_my_name_is</string>
+    <string name="phrase_how_are_you_feeling">phrase_how_are_you_feeling</string>
+    <string name="miwok_phrase_how_are_you_feeling">miwok_phrase_how_are_you_feeling</string>
+    <string name="phrase_im_feeling_good">phrase_im_feeling_good</string>
+    <string name="miwok_phrase_im_feeling_good">miwok_phrase_im_feeling_good</string>
+    <string name="phrase_are_you_coming">phrase_are_you_coming,</string>
+    <string name="miwok_phrase_are_you_coming">miwok_phrase_are_you_coming</string>
 
+    <string name="phrase_yes_im_coming">phrase_yes_im_coming</string>
+    <string name="miwok_phrase_yes_im_coming">phrase_yes_im_coming</string>
 
 </resources>
